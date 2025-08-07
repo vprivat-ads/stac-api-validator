@@ -1129,9 +1129,6 @@ def validate_features(
     open_assets_urls: bool = True,
     stac_check_config: Optional[str] = None,
 ) -> None:
-    if not geometry:
-        warnings += f"[{Context.FEATURES}] Geometry parameter required for running Features validations."
-
     if not collection:
         errors += f"[{Context.FEATURES}] Collection parameter required for running Features validations."
         return
